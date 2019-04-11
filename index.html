@@ -54,8 +54,8 @@
     /><br />
     <div id="ifYes" style="display:none">
       Please enter name<br>
-      First name: <input type="text" id="yes" name="yes" /><br>
-      Last name:  <input type="text" id="acc" name="acc" />
+      First name: <input type="text" id="yes" name="yes"/><br>
+      Last name:  <input type="text" id="acc" name="acc"/>
     </div>
     <h3>Please choose a prayer</h3>
     <h6>Please pray for me in the following area</h6>
@@ -70,7 +70,7 @@
     <br><br>
   *Request<br>
   <textarea name="message" class="form-control" cols="100" rows="5" placeholder="Briefly tell us how we can pray for you"></textarea><br>
-  <button type="submit" name="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" name="submit" class="btn btn-primary" onclick="myPrayer()">Submit</button>
   </form>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -82,6 +82,10 @@
           document.getElementById("ifYes").style.display = "block";
         } else document.getElementById("ifYes").style.display = "none";
       }
+      
+      function myPrayer() {
+      alert("Your prayer has been submitted!");
+}
     </script>
   </body>
 </html>
