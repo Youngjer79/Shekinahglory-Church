@@ -30,6 +30,15 @@
       font-weight: 600;
       color: blue;
     }
+    input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+}
    </style>
   </head>
   <body>
@@ -54,8 +63,8 @@
     /><br />
     <div id="ifYes" style="display:none">
       Please enter name<br>
-      First name: <input type="text" id="yes" name="yes"/><br>
-      Last name:  <input type="text" id="acc" name="acc"/>
+      First name: <input type="text" id="yes" name="yes" required/><br>
+      Last name:  <input type="text" id="acc" name="acc" required/>
     </div>
     <h3>Please choose a prayer</h3>
     <h6>Please pray for me in the following area</h6>
