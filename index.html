@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <title>Shekinahglory Church | Pray Request</title>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+    }
+
+    body{
+      background-color: #323436;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .container{
+      background-color: #fff;
+      height: 100vh;
+    }
+
+    .title{
+      text-align: center;
+      font-size: 40px;
+      font-weight: 600;
+      color: blue;
+    }
+   </style>
+  </head>
+  <body>
+      <div class="container">
+          <h1 class="title">Prayer Request</h1>
+            <h3>How can we pray for you?</h3>
+      <form>
+            <h5>Please enter your name or can choose to be anonymous</h5>
+    Name
+    <input
+      type="radio"
+      onclick="javascript:yesnoCheck();"
+      name="yesno"
+      id="yesCheck"
+    />
+    Anonymous
+    <input
+      type="radio"
+      onclick="javascript:yesnoCheck();"
+      name="yesno"
+      id="noCheck"
+    /><br />
+    <div id="ifYes" style="display:none">
+      Please enter name<br>
+      First name: <input type="text" id="yes" name="yes" /><br>
+      Last name:  <input type="text" id="acc" name="acc" />
+    </div>
+    <h3>Please choose a prayer</h3>
+    <h6>Please pray for me in the following area</h6>
+     <select name = "general">
+        <option value="general">General</a>
+        <option value="emotional healing ">Emotional Healing</a>
+        <option value="physical healing">Physical Healing</a>
+        <option value="finances">Finances</a>
+        <option value="relationships">Relationships</a>
+        <option value="spiritual growth">Spiritual Growth</a>
+     </select>
+    <br><br>
+  *Request<br>
+  <textarea name="message" class="form-control" cols="100" rows="5" placeholder="Briefly tell us how we can pray for you"></textarea><br>
+  <button type="submit" name="submit" class="btn btn-primary">Submit</button>
+  </form>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      function yesnoCheck() {
+        if (document.getElementById("yesCheck").checked) {
+          document.getElementById("ifYes").style.display = "block";
+        } else document.getElementById("ifYes").style.display = "none";
+      }
+    </script>
+  </body>
+</html>
